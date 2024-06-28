@@ -14,6 +14,9 @@
 		8B128DCA2C2ECD0A0063F7A6 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B128DC72C2ECD0A0063F7A6 /* Poppins-SemiBold.ttf */; };
 		8B128DCB2C2ECD0A0063F7A6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B128DC32C2ECD0A0063F7A6 /* Poppins-Bold.ttf */; };
 		8B128DCC2C2ECD0A0063F7A6 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B128DC52C2ECD0A0063F7A6 /* Poppins-Medium.ttf */; };
+		8B128DCE2C2F35620063F7A6 /* AboutBluetoothDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B128DCD2C2F35620063F7A6 /* AboutBluetoothDeviceViewController.swift */; };
+		8B128DD12C2F35C40063F7A6 /* FoundBluetoothDeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B128DD02C2F35C40063F7A6 /* FoundBluetoothDeviceTableViewCell.swift */; };
+		8B128DD32C2F478F0063F7A6 /* FavoriteDevisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B128DD22C2F478F0063F7A6 /* FavoriteDevisesViewController.swift */; };
 		8B859DDB2C2D3BD900D61B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B859DDA2C2D3BD900D61B3F /* AppDelegate.swift */; };
 		8B859DDD2C2D3BD900D61B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B859DDC2C2D3BD900D61B3F /* SceneDelegate.swift */; };
 		8B859DDF2C2D3BD900D61B3F /* FirstSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B859DDE2C2D3BD900D61B3F /* FirstSplashScreen.swift */; };
@@ -58,6 +61,9 @@
 		8B128DC52C2ECD0A0063F7A6 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		8B128DC62C2ECD0A0063F7A6 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		8B128DC72C2ECD0A0063F7A6 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		8B128DCD2C2F35620063F7A6 /* AboutBluetoothDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBluetoothDeviceViewController.swift; sourceTree = "<group>"; };
+		8B128DD02C2F35C40063F7A6 /* FoundBluetoothDeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundBluetoothDeviceTableViewCell.swift; sourceTree = "<group>"; };
+		8B128DD22C2F478F0063F7A6 /* FavoriteDevisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDevisesViewController.swift; sourceTree = "<group>"; };
 		8B859DD72C2D3BD900D61B3F /* Find-lost-pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find-lost-pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B859DDA2C2D3BD900D61B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B859DDC2C2D3BD900D61B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,9 +136,20 @@
 		8B128DC02C2ECAD70063F7A6 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				8B128DCF2C2F35B90063F7A6 /* Cells */,
 				8B128DC12C2ECAEE0063F7A6 /* HomeViewController.swift */,
+				8B128DCD2C2F35620063F7A6 /* AboutBluetoothDeviceViewController.swift */,
+				8B128DD22C2F478F0063F7A6 /* FavoriteDevisesViewController.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		8B128DCF2C2F35B90063F7A6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8B128DD02C2F35C40063F7A6 /* FoundBluetoothDeviceTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8B859DCE2C2D3BD900D61B3F = {
@@ -360,9 +377,12 @@
 			files = (
 				8B859DDF2C2D3BD900D61B3F /* FirstSplashScreen.swift in Sources */,
 				8B859E1D2C2D9C6400D61B3F /* FortySplashScreen.swift in Sources */,
+				8B128DD32C2F478F0063F7A6 /* FavoriteDevisesViewController.swift in Sources */,
 				8B859DDB2C2D3BD900D61B3F /* AppDelegate.swift in Sources */,
+				8B128DCE2C2F35620063F7A6 /* AboutBluetoothDeviceViewController.swift in Sources */,
 				8B859E192C2D776300D61B3F /* SecondSplashScreen.swift in Sources */,
 				8B859E1B2C2D9B4400D61B3F /* ThirdSplashScreen.swift in Sources */,
+				8B128DD12C2F35C40063F7A6 /* FoundBluetoothDeviceTableViewCell.swift in Sources */,
 				8B859E0F2C2D41D500D61B3F /* GradientView.swift in Sources */,
 				8B859E1F2C2DC3AC00D61B3F /* FreeTrialViewConroller.swift in Sources */,
 				8B128DC22C2ECAEE0063F7A6 /* HomeViewController.swift in Sources */,
@@ -553,6 +573,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Find-lost-pods/Info.plist";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow \"Find Lost Pods - My Tracker\" to find Bluetooth devices. Our app uses bluetooth to find, connect and transfer data between different devices. ";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use your location to show you on the map";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you on the map";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -581,6 +603,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Find-lost-pods/Info.plist";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow \"Find Lost Pods - My Tracker\" to find Bluetooth devices. Our app uses bluetooth to find, connect and transfer data between different devices. ";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use your location to show you on the map";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you on the map";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
