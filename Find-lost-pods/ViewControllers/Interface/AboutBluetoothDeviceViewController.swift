@@ -9,34 +9,132 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class AboutBluetoothDeviceViewController: UIViewController{
+class AboutBluetoothDeviceViewController: UIViewController {
     
+    @IBOutlet weak var nameOfDevice: UILabel!
+    @IBOutlet weak var soundSwitch: UISwitch!
+    @IBOutlet weak var chargeLabel: UILabel!
+    @IBOutlet weak var vibroSwitch: UISwitch!
+    @IBOutlet weak var backImage: UIImageView!
+    @IBOutlet weak var openMapLabel: UILabel!
+    @IBOutlet weak var soundView: UIView!
+    @IBOutlet weak var vibroView: UIView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var battery: UIImageView!
+    @IBOutlet weak var foundUIButton: UIButton!
+    @IBOutlet weak var pin: UIImageView!
+    
+    @IBAction func foundButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBOutlet weak var mapViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var openMapHeigthConstraint: NSLayoutConstraint!
+    var map_open = false
+    
     let locationManager = CLLocationManager()
+    let defaults = UserDefaults.standard
+    
+    var device: BluetoothDevice? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.delegate = self
         mapView.showsUserLocation = true
+        mapView.isOpaque = true
         
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+        nameOfDevice.text = device?.name
+        chargeLabel.text = device?.charge
+        
+        let backTapGesture = UITapGestureRecognizer(target: self, action: #selector(backTapped))
+        backImage.addGestureRecognizer(backTapGesture)
+        backImage.isUserInteractionEnabled = true
+        
+        let mapTapGesture = UITapGestureRecognizer(target: self, action: #selector(mapTapped))
+        mapView.addGestureRecognizer(mapTapGesture)
+        mapView.isUserInteractionEnabled = true
+        
+        let pinTapGesture = UITapGestureRecognizer(target: self, action: #selector(pinTapped))
+        pin.addGestureRecognizer(pinTapGesture)
+        pin.isUserInteractionEnabled = true
+        
+        soundView.layer.cornerRadius = 15
+        vibroView.layer.cornerRadius = 15
+        
+        addDeviceToDefaults(newDevice: device!, key: "historyDevices")
+
+        
+        if let deviceCoordinate = device?.coordinates {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: deviceCoordinate[0], longitude: deviceCoordinate[1])
+            mapView.addAnnotation(annotation)
+            
+            mapView.setCenter(annotation.coordinate, animated: true)
+        }
+    }
+    
+    @objc private func backTapped() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func pinTapped() {
+        addDeviceToDefaults(newDevice: device!, key: "favoriteDevices")
+    }
+    
+    func addDeviceToDefaults(newDevice: BluetoothDevice, key: String) {
+        let defaults = UserDefaults.standard
+        
+        if let savedDevicesData = defaults.data(forKey: key) {
+            let decoder = JSONDecoder()
+            if var loadedDevices = try? decoder.decode([BluetoothDevice].self, from: savedDevicesData) {
+                loadedDevices.append(newDevice)
+                
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(loadedDevices) {
+                    defaults.set(encoded, forKey: key)
+                    print("Device added to existing array: \(newDevice.name)")
+                }
+            }
+        } else {
+            let newDevicesArray = [newDevice]
+            
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(newDevicesArray) {
+                defaults.set(encoded, forKey: key)
+                print("Device added to new array: \(newDevice.name)")
+            }
+        }
+    }
+
+    
+    @objc private func mapTapped() {
+        if !map_open {
+            mapViewHeightConstraint.constant *= 0.5
+            openMapHeigthConstraint.constant *= 0.5
+            openMapLabel.text = "Hide map"
+            map_open = true
+            battery.isHidden = true
+            soundView.isHidden = true
+            vibroView.isHidden = true
+            foundUIButton.isHidden = true
+        } else {
+            mapViewHeightConstraint.constant *= 2
+            openMapHeigthConstraint.constant *= 2
+            map_open = false
+            openMapLabel.text = "Open map"
+            battery.isHidden = false
+            soundView.isHidden = false
+            vibroView.isHidden = false
+            foundUIButton.isHidden = false
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
-extension AboutBluetoothDeviceViewController: CLLocationManagerDelegate, MKMapViewDelegate{
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            if let location = locations.first {
-                let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-                let region = MKCoordinateRegion(center: location.coordinate, span: span)
-                mapView.setRegion(region, animated: true)
-            }
-        }
-        
-        func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-            print("Ошибка при получении местоположения: \(error.localizedDescription)")
-        }
+extension AboutBluetoothDeviceViewController: MKMapViewDelegate {
+    
 }

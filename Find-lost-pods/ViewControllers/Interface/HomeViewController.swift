@@ -1,3 +1,10 @@
+//
+//  HomeViewController.swift
+//  Find-lost-pods
+//
+//  Created by Danil Dymytrov on 28.06.2024.
+//
+
 import UIKit
 import CoreBluetooth
 
@@ -6,9 +13,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var controlPanelView: UIView!
     @IBOutlet weak var helpCenterLabel: UILabel!
     
-    var centralManager: CBCentralManager!
-    var peripherals: [CBPeripheral] = []
-    
+    @IBOutlet weak var settings: UIImageView!
+    @IBOutlet weak var favorites: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,39 +22,38 @@ class HomeViewController: UIViewController {
         helpCenterLabel.attributedText = underlineText(helpCenterLabel.text!)
         helpCenterLabel.textColor = .white
         
-        centralManager = CBCentralManager(delegate: self, queue: nil)
+        setupGestures()
+        
+    }
+    
+    private func setupGestures() {
+        let favoritesTapGesture = UITapGestureRecognizer(target: self, action: #selector(favoritesTapped))
+        favorites.addGestureRecognizer(favoritesTapGesture)
+        favorites.isUserInteractionEnabled = true
+        
+        let settingsTapGesture = UITapGestureRecognizer(target: self, action: #selector(settingsTapped))
+        settings.addGestureRecognizer(settingsTapGesture)
+        settings.isUserInteractionEnabled = true
+    }
+    
+    @objc private func favoritesTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let favoriteDevicesViewController = storyboard.instantiateViewController(withIdentifier: "FavoriteDevicesViewConroller") as? FavoriteDevicesViewConroller {
+            favoriteDevicesViewController.modalPresentationStyle = .fullScreen
+            present(favoriteDevicesViewController, animated: true, completion: nil)
+        }
+    }
+    
+    @objc private func settingsTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let settingsViewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController {
+            settingsViewController.modalPresentationStyle = .fullScreen
+            present(settingsViewController, animated: true, completion: nil)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        startScanning()
-        
-    }
-    
-    func checkBluetoothAuthorization(_ central: CBCentralManager) {
-            switch central.state {
-            case .unknown:
-                print("unknown")
-            case .resetting:
-                print("resetting")
-            case .unsupported:
-                print("unsupported")
-            case .unauthorized:
-                print("unauthorized")
-            case .poweredOff:
-                print("poweredOff")
-                centralManager?.stopScan()
-            case .poweredOn:
-                print("poweredOn")
-                centralManager?.scanForPeripherals(withServices: nil, options: nil)
-            }
-        }
-    
-    func startScanning() {
-        let serviceUUIDs: [CBUUID]? = nil
-        let options = [CBCentralManagerScanOptionAllowDuplicatesKey: true]
-        centralManager.scanForPeripherals(withServices: serviceUUIDs, options: options)
     }
     
     private func underlineText(_ text: String) -> NSAttributedString {
@@ -56,18 +61,18 @@ class HomeViewController: UIViewController {
         attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: text.count))
         return attributedString
     }
-}
-
-extension HomeViewController: CBCentralManagerDelegate {
     
-    func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        checkBluetoothAuthorization(central)
-    }
-    
-    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        if !peripherals.contains(peripheral) {
-            peripherals.append(peripheral)
-            print("Найдено устройство: \(peripheral)")
+    @IBAction func searchButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let searchDevicesViewController = storyboard.instantiateViewController(withIdentifier: "SearchDevicesViewController") as? SearchDevicesViewController {
+            searchDevicesViewController.modalPresentationStyle = .fullScreen
+            present(searchDevicesViewController, animated: true, completion: nil)
         }
     }
+    
+    
 }
+
+
+
+

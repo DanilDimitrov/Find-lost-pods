@@ -16,7 +16,8 @@
 		8B128DCC2C2ECD0A0063F7A6 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B128DC52C2ECD0A0063F7A6 /* Poppins-Medium.ttf */; };
 		8B128DCE2C2F35620063F7A6 /* AboutBluetoothDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B128DCD2C2F35620063F7A6 /* AboutBluetoothDeviceViewController.swift */; };
 		8B128DD12C2F35C40063F7A6 /* FoundBluetoothDeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B128DD02C2F35C40063F7A6 /* FoundBluetoothDeviceTableViewCell.swift */; };
-		8B128DD32C2F478F0063F7A6 /* FavoriteDevisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B128DD22C2F478F0063F7A6 /* FavoriteDevisesViewController.swift */; };
+		8B128DD32C2F478F0063F7A6 /* FavoriteDevicesViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B128DD22C2F478F0063F7A6 /* FavoriteDevicesViewConroller.swift */; };
+		8B128DD52C2FE05C0063F7A6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B128DD42C2FE05C0063F7A6 /* SettingsViewController.swift */; };
 		8B859DDB2C2D3BD900D61B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B859DDA2C2D3BD900D61B3F /* AppDelegate.swift */; };
 		8B859DDD2C2D3BD900D61B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B859DDC2C2D3BD900D61B3F /* SceneDelegate.swift */; };
 		8B859DDF2C2D3BD900D61B3F /* FirstSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B859DDE2C2D3BD900D61B3F /* FirstSplashScreen.swift */; };
@@ -34,6 +35,15 @@
 		8B859E1D2C2D9C6400D61B3F /* FortySplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B859E1C2C2D9C6400D61B3F /* FortySplashScreen.swift */; };
 		8B859E1F2C2DC3AC00D61B3F /* FreeTrialViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B859E1E2C2DC3AC00D61B3F /* FreeTrialViewConroller.swift */; };
 		8B859E212C2DF57300D61B3F /* PayWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B859E202C2DF57300D61B3F /* PayWallViewController.swift */; };
+		8BF129A92C2FF4A7005ED853 /* BluetoothViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF129A82C2FF4A7005ED853 /* BluetoothViewModel.swift */; };
+		8BF129AB2C2FF504005ED853 /* BluetoothDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF129AA2C2FF504005ED853 /* BluetoothDevice.swift */; };
+		8BF129AD2C2FFB59005ED853 /* SearchDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF129AC2C2FFB59005ED853 /* SearchDevicesViewController.swift */; };
+		8BF129AF2C2FFE57005ED853 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF129AE2C2FFE57005ED853 /* SearchResultViewController.swift */; };
+		8BF129B22C3057C0005ED853 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF129B12C3057C0005ED853 /* WebKit.framework */; };
+		8BF129B42C305DB0005ED853 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF129B32C305DB0005ED853 /* WebViewController.swift */; };
+		8BF129B82C305F23005ED853 /* termsofuse.html in Resources */ = {isa = PBXBuildFile; fileRef = 8BF129B72C305F23005ED853 /* termsofuse.html */; };
+		8BF129B92C305F23005ED853 /* privacypolicy.html in Resources */ = {isa = PBXBuildFile; fileRef = 8BF129B62C305F23005ED853 /* privacypolicy.html */; };
+		8BF129BB2C306223005ED853 /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = 8BF129BA2C306223005ED853 /* faq.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +73,8 @@
 		8B128DC72C2ECD0A0063F7A6 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		8B128DCD2C2F35620063F7A6 /* AboutBluetoothDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBluetoothDeviceViewController.swift; sourceTree = "<group>"; };
 		8B128DD02C2F35C40063F7A6 /* FoundBluetoothDeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundBluetoothDeviceTableViewCell.swift; sourceTree = "<group>"; };
-		8B128DD22C2F478F0063F7A6 /* FavoriteDevisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDevisesViewController.swift; sourceTree = "<group>"; };
+		8B128DD22C2F478F0063F7A6 /* FavoriteDevicesViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDevicesViewConroller.swift; sourceTree = "<group>"; };
+		8B128DD42C2FE05C0063F7A6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8B859DD72C2D3BD900D61B3F /* Find-lost-pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find-lost-pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B859DDA2C2D3BD900D61B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B859DDC2C2D3BD900D61B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +96,15 @@
 		8B859E1C2C2D9C6400D61B3F /* FortySplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortySplashScreen.swift; sourceTree = "<group>"; };
 		8B859E1E2C2DC3AC00D61B3F /* FreeTrialViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTrialViewConroller.swift; sourceTree = "<group>"; };
 		8B859E202C2DF57300D61B3F /* PayWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallViewController.swift; sourceTree = "<group>"; };
+		8BF129A82C2FF4A7005ED853 /* BluetoothViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewModel.swift; sourceTree = "<group>"; };
+		8BF129AA2C2FF504005ED853 /* BluetoothDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDevice.swift; sourceTree = "<group>"; };
+		8BF129AC2C2FFB59005ED853 /* SearchDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDevicesViewController.swift; sourceTree = "<group>"; };
+		8BF129AE2C2FFE57005ED853 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		8BF129B12C3057C0005ED853 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		8BF129B32C305DB0005ED853 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		8BF129B62C305F23005ED853 /* privacypolicy.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = privacypolicy.html; sourceTree = "<group>"; };
+		8BF129B72C305F23005ED853 /* termsofuse.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = termsofuse.html; sourceTree = "<group>"; };
+		8BF129BA2C306223005ED853 /* faq.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF129B22C3057C0005ED853 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +160,10 @@
 				8B128DCF2C2F35B90063F7A6 /* Cells */,
 				8B128DC12C2ECAEE0063F7A6 /* HomeViewController.swift */,
 				8B128DCD2C2F35620063F7A6 /* AboutBluetoothDeviceViewController.swift */,
-				8B128DD22C2F478F0063F7A6 /* FavoriteDevisesViewController.swift */,
+				8B128DD22C2F478F0063F7A6 /* FavoriteDevicesViewConroller.swift */,
+				8B128DD42C2FE05C0063F7A6 /* SettingsViewController.swift */,
+				8BF129AC2C2FFB59005ED853 /* SearchDevicesViewController.swift */,
+				8BF129AE2C2FFE57005ED853 /* SearchResultViewController.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -159,6 +183,7 @@
 				8B859DF02C2D3BDA00D61B3F /* Find-lost-podsTests */,
 				8B859DFA2C2D3BDA00D61B3F /* Find-lost-podsUITests */,
 				8B859DD82C2D3BD900D61B3F /* Products */,
+				8BF129B02C3057C0005ED853 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +200,8 @@
 		8B859DD92C2D3BD900D61B3F /* Find-lost-pods */ = {
 			isa = PBXGroup;
 			children = (
+				8BF129B52C305EF9005ED853 /* Htmls */,
+				8BF129A72C2FF485005ED853 /* BluetoothManager */,
 				8B859E132C2D69ED00D61B3F /* ViewControllers */,
 				8B859E102C2D5E1D00D61B3F /* Fonts */,
 				8B859E0B2C2D419200D61B3F /* Views */,
@@ -233,8 +260,36 @@
 				8B128DC02C2ECAD70063F7A6 /* Interface */,
 				8B128DBF2C2ECA550063F7A6 /* PayWall */,
 				8B128DBE2C2ECA470063F7A6 /* SplashScreens */,
+				8BF129B32C305DB0005ED853 /* WebViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8BF129A72C2FF485005ED853 /* BluetoothManager */ = {
+			isa = PBXGroup;
+			children = (
+				8BF129A82C2FF4A7005ED853 /* BluetoothViewModel.swift */,
+				8BF129AA2C2FF504005ED853 /* BluetoothDevice.swift */,
+			);
+			path = BluetoothManager;
+			sourceTree = "<group>";
+		};
+		8BF129B02C3057C0005ED853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BF129B12C3057C0005ED853 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BF129B52C305EF9005ED853 /* Htmls */ = {
+			isa = PBXGroup;
+			children = (
+				8BF129BA2C306223005ED853 /* faq.html */,
+				8BF129B62C305F23005ED853 /* privacypolicy.html */,
+				8BF129B72C305F23005ED853 /* termsofuse.html */,
+			);
+			path = Htmls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +403,9 @@
 				8B128DCC2C2ECD0A0063F7A6 /* Poppins-Medium.ttf in Resources */,
 				8B859E122C2D5E3E00D61B3F /* Inter-VariableFont_slnt,wght.ttf in Resources */,
 				8B859DE42C2D3BDA00D61B3F /* Assets.xcassets in Resources */,
+				8BF129BB2C306223005ED853 /* faq.html in Resources */,
+				8BF129B82C305F23005ED853 /* termsofuse.html in Resources */,
+				8BF129B92C305F23005ED853 /* privacypolicy.html in Resources */,
 				8B859DE72C2D3BDA00D61B3F /* Base in Resources */,
 				8B128DBD2C2ECA400063F7A6 /* Interface.storyboard in Resources */,
 				8B859DE22C2D3BD900D61B3F /* Base in Resources */,
@@ -377,17 +435,23 @@
 			files = (
 				8B859DDF2C2D3BD900D61B3F /* FirstSplashScreen.swift in Sources */,
 				8B859E1D2C2D9C6400D61B3F /* FortySplashScreen.swift in Sources */,
-				8B128DD32C2F478F0063F7A6 /* FavoriteDevisesViewController.swift in Sources */,
+				8B128DD32C2F478F0063F7A6 /* FavoriteDevicesViewConroller.swift in Sources */,
+				8BF129B42C305DB0005ED853 /* WebViewController.swift in Sources */,
 				8B859DDB2C2D3BD900D61B3F /* AppDelegate.swift in Sources */,
 				8B128DCE2C2F35620063F7A6 /* AboutBluetoothDeviceViewController.swift in Sources */,
+				8BF129A92C2FF4A7005ED853 /* BluetoothViewModel.swift in Sources */,
 				8B859E192C2D776300D61B3F /* SecondSplashScreen.swift in Sources */,
 				8B859E1B2C2D9B4400D61B3F /* ThirdSplashScreen.swift in Sources */,
+				8B128DD52C2FE05C0063F7A6 /* SettingsViewController.swift in Sources */,
 				8B128DD12C2F35C40063F7A6 /* FoundBluetoothDeviceTableViewCell.swift in Sources */,
 				8B859E0F2C2D41D500D61B3F /* GradientView.swift in Sources */,
+				8BF129AB2C2FF504005ED853 /* BluetoothDevice.swift in Sources */,
+				8BF129AD2C2FFB59005ED853 /* SearchDevicesViewController.swift in Sources */,
 				8B859E1F2C2DC3AC00D61B3F /* FreeTrialViewConroller.swift in Sources */,
 				8B128DC22C2ECAEE0063F7A6 /* HomeViewController.swift in Sources */,
 				8B859DDD2C2D3BD900D61B3F /* SceneDelegate.swift in Sources */,
 				8B859E152C2D6A0600D61B3F /* SplashViewController.swift in Sources */,
+				8BF129AF2C2FFE57005ED853 /* SearchResultViewController.swift in Sources */,
 				8B859E212C2DF57300D61B3F /* PayWallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
