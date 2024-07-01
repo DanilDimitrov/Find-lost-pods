@@ -34,21 +34,32 @@ class HomeViewController: UIViewController {
         let settingsTapGesture = UITapGestureRecognizer(target: self, action: #selector(settingsTapped))
         settings.addGestureRecognizer(settingsTapGesture)
         settings.isUserInteractionEnabled = true
+        
+        let helpCenterTapGesture = UITapGestureRecognizer(target: self, action: #selector(helpCenterTapped))
+        helpCenterLabel.addGestureRecognizer(helpCenterTapGesture)
+        helpCenterLabel.isUserInteractionEnabled = true
+    }
+    
+    @objc private func helpCenterTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let webViewConroller = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController {
+            webViewConroller.name_of_html_for_label = "FAQ"
+            webViewConroller.name_of_html_file = "faq"
+            self.navigationController?.pushViewController(webViewConroller, animated: true)
+        }
     }
     
     @objc private func favoritesTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let favoriteDevicesViewController = storyboard.instantiateViewController(withIdentifier: "FavoriteDevicesViewConroller") as? FavoriteDevicesViewConroller {
-            favoriteDevicesViewController.modalPresentationStyle = .fullScreen
-            present(favoriteDevicesViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(favoriteDevicesViewController, animated: true)
         }
     }
     
     @objc private func settingsTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let settingsViewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController {
-            settingsViewController.modalPresentationStyle = .fullScreen
-            present(settingsViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(settingsViewController, animated: true)
         }
     }
     
@@ -65,8 +76,8 @@ class HomeViewController: UIViewController {
     @IBAction func searchButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let searchDevicesViewController = storyboard.instantiateViewController(withIdentifier: "SearchDevicesViewController") as? SearchDevicesViewController {
-            searchDevicesViewController.modalPresentationStyle = .fullScreen
-            present(searchDevicesViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(searchDevicesViewController, animated: true)
+
         }
     }
     

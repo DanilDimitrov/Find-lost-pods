@@ -15,6 +15,7 @@ class SearchResultViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var favorites: UIImageView!
     @IBOutlet weak var settings: UIImageView!
+    @IBOutlet weak var history: UIImageView!
     
     var devices: [BluetoothDevice] = [BluetoothDevice(name: "Unknown Device",
                                                                    charge: "70%",
@@ -45,6 +46,14 @@ class SearchResultViewController: UIViewController {
         setupGestures()
     }
     
+    @objc private func historyTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let favoritesViewController = storyboard.instantiateViewController(withIdentifier: "FavoriteDevicesViewConroller") as? FavoriteDevicesViewConroller {
+            favoritesViewController.fromHistory = true
+            self.navigationController?.pushViewController(favoritesViewController, animated: true)
+        }
+    }
+    
     private func underlineText(_ text: String) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: text)
         attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: text.count))
@@ -54,8 +63,7 @@ class SearchResultViewController: UIViewController {
     @IBAction func searchAgain(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let searchDevicesViewController = storyboard.instantiateViewController(withIdentifier: "SearchDevicesViewController") as? SearchDevicesViewController {
-            searchDevicesViewController.modalPresentationStyle = .fullScreen
-            present(searchDevicesViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(searchDevicesViewController, animated: true)
         }
     }
     
@@ -67,21 +75,37 @@ class SearchResultViewController: UIViewController {
         let settingsTapGesture = UITapGestureRecognizer(target: self, action: #selector(settingsTapped))
         settings.addGestureRecognizer(settingsTapGesture)
         settings.isUserInteractionEnabled = true
+        
+        let historyTapGesture = UITapGestureRecognizer(target: self, action: #selector(historyTapped))
+        history.addGestureRecognizer(historyTapGesture)
+        history.isUserInteractionEnabled = true
+        
+        let helpCenterTapGesture = UITapGestureRecognizer(target: self, action: #selector(helpCenterTapped))
+        helpCenterLabel.addGestureRecognizer(helpCenterTapGesture)
+        helpCenterLabel.isUserInteractionEnabled = true
+    }
+    
+    @objc private func helpCenterTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let webViewConroller = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController {
+            webViewConroller.name_of_html_for_label = "FAQ"
+            webViewConroller.name_of_html_file = "faq"
+            self.navigationController?.pushViewController(webViewConroller, animated: true)
+        }
     }
     
     @objc private func favoritesTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let favoriteDevicesViewController = storyboard.instantiateViewController(withIdentifier: "FavoriteDevicesViewConroller") as? FavoriteDevicesViewConroller {
-            favoriteDevicesViewController.modalPresentationStyle = .fullScreen
-            present(favoriteDevicesViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(favoriteDevicesViewController, animated: true)
+
         }
     }
     
     @objc private func settingsTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let settingsViewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController {
-            settingsViewController.modalPresentationStyle = .fullScreen
-            present(settingsViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(settingsViewController, animated: true)
         }
     }
 }
@@ -105,7 +129,7 @@ extension SearchResultViewController: UITableViewDelegate {
         if let aboutViewController = storyboard.instantiateViewController(withIdentifier: "AboutBluetoothDeviceViewController") as? AboutBluetoothDeviceViewController {
             aboutViewController.modalPresentationStyle = .fullScreen
             aboutViewController.device = device
-            present(aboutViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(aboutViewController, animated: true)
         } else {
             print("AboutBluetoothDeviceViewController not found")
         }

@@ -11,6 +11,7 @@ class FirstSplashScreen: UIViewController {
     
     @IBOutlet private weak var continueButton: UIButton!
 
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +19,9 @@ class FirstSplashScreen: UIViewController {
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let mainViewController = storyboard.instantiateViewController(withIdentifier: "SecondSplashScreen") as? SecondSplashScreen {
-            mainViewController.modalPresentationStyle = .fullScreen
-            self.present(mainViewController, animated: true, completion: nil)
-        }
+        let vc = storyboard.instantiateViewController(withIdentifier: "SecondSplashScreen") as! SecondSplashScreen
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
 
 

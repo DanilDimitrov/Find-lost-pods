@@ -73,6 +73,18 @@ class SettingsViewController: UIViewController{
             hide_unknown_devices.setOn(false, animated: true)
         }
         
+        let historyTapGesture = UITapGestureRecognizer(target: self, action: #selector(historyTapped))
+        history.addGestureRecognizer(historyTapGesture)
+        history.isUserInteractionEnabled = true
+        
+    }
+    
+    @objc private func historyTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let favoritesViewController = storyboard.instantiateViewController(withIdentifier: "FavoriteDevicesViewConroller") as? FavoriteDevicesViewConroller {
+            favoritesViewController.fromHistory = true
+            self.navigationController?.pushViewController(favoritesViewController, animated: true)
+        }
     }
     
     @objc func hideUnknownDevices(_ sender: UISwitch) {
@@ -100,38 +112,34 @@ class SettingsViewController: UIViewController{
     @objc private func faqTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let webViewConroller = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController {
-            webViewConroller.modalPresentationStyle = .fullScreen
             webViewConroller.name_of_html_for_label = "FAQ"
             webViewConroller.name_of_html_file = "faq"
-            present(webViewConroller, animated: true, completion: nil)
+            self.navigationController?.pushViewController(webViewConroller, animated: true)
         }
     }
     
     @objc private func privacyPolicyTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let webViewConroller = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController {
-            webViewConroller.modalPresentationStyle = .fullScreen
             webViewConroller.name_of_html_for_label = "Privacy Policy"
             webViewConroller.name_of_html_file = "privacypolicy"
-            present(webViewConroller, animated: true, completion: nil)
+            self.navigationController?.pushViewController(webViewConroller, animated: true)
         }
     }
     
     @objc private func termsofUseTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let webViewConroller = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController {
-            webViewConroller.modalPresentationStyle = .fullScreen
             webViewConroller.name_of_html_for_label = "Terms Of Use"
             webViewConroller.name_of_html_file = "termsofuse"
-            present(webViewConroller, animated: true, completion: nil)
+            self.navigationController?.pushViewController(webViewConroller, animated: true)
         }
     }
     
     @objc private func favoritesTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let favoriteDevicesViewConroller = storyboard.instantiateViewController(withIdentifier: "FavoriteDevicesViewConroller") as? FavoriteDevicesViewConroller {
-            favoriteDevicesViewConroller.modalPresentationStyle = .fullScreen
-            present(favoriteDevicesViewConroller, animated: true, completion: nil)
+            self.navigationController?.pushViewController(favoriteDevicesViewConroller, animated: true)
         }
     }
     
@@ -140,8 +148,7 @@ class SettingsViewController: UIViewController{
     @objc private func homeTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
-            homeViewController.modalPresentationStyle = .fullScreen
-            present(homeViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(homeViewController, animated: true)
         }
     }
 }

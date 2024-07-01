@@ -39,6 +39,6 @@ class WebViewController: UIViewController {
     }
     
     @objc private func backTapped() {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }

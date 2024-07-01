@@ -14,22 +14,27 @@ class SplashViewController: UIViewController{
     @IBOutlet private weak var second_point: UIImageView!
     @IBOutlet private weak var end_point: UIImageView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.animateImageViewUp(self.fisrt_point, offset: -10)
         self.animateImageViewUp(self.second_point, offset: -5)
         self.animateImageViewDown(self.end_point, offset: 10)
-        
+                
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            
             self.navigateToMainViewController()
         }
     }
     
     private func navigateToMainViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let mainViewController = storyboard.instantiateViewController(withIdentifier: "FirstSplashScreen") as? FirstSplashScreen {
-            mainViewController.modalPresentationStyle = .fullScreen
-            self.present(mainViewController, animated: true, completion: nil)
+        if !UserDefaults.standard.bool(forKey: "hasCompletedOnboarding") {
+            let vc = storyboard.instantiateViewController(withIdentifier: "FirstSplashScreen") as! FirstSplashScreen
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -52,5 +57,4 @@ class SplashViewController: UIViewController{
             }
         }
     }
-    
 }

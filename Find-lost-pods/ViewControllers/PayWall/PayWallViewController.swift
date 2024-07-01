@@ -18,7 +18,9 @@ class PayWallViewController: UIViewController{
     @IBOutlet weak var labelYearAbout: UILabel!
     @IBOutlet weak var weekPrice: UILabel!
     @IBOutlet weak var yearPrice: UILabel!
+    @IBOutlet weak var cross: UIImageView!
     
+    var fromInterface = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,20 @@ class PayWallViewController: UIViewController{
         
         switchButton.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
         
-        
+        let crossTapGesture = UITapGestureRecognizer(target: self, action: #selector(crossTapped))
+        cross.addGestureRecognizer(crossTapGesture)
+        cross.isUserInteractionEnabled = true
+    }
+    
+    @objc private func crossTapped() {
+        if fromInterface == false{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let mainViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+                self.navigationController?.pushViewController(mainViewController, animated: true)
+            }
+        }else{
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     @objc func weekPlanTapped() {

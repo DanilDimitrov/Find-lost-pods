@@ -14,10 +14,13 @@ class FortySplashScreen: UIViewController{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let mainViewController = storyboard.instantiateViewController(withIdentifier: "FreeTrialViewConroller") as? FreeTrialViewConroller {
             mainViewController.modalPresentationStyle = .fullScreen
-            self.present(mainViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(mainViewController, animated: true)
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UserDefaults.standard.set(true, forKey: "hasCompletedOnboarding")
+
     }
 }

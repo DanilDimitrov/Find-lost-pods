@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23077.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nwq-uA-6cF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23077.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xPD-R5-9ub">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23068.1"/>
@@ -130,12 +130,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.610687022900763" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="947.32824427480909" y="4.9295774647887329"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="Rib-wS-Gze">
             <objects>
-                <viewController id="RKe-cO-ClX" customClass="SplashViewController" customModule="Find_lost_pods" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RKe-cO-ClX" customClass="SplashViewController" customModule="Find_lost_pods" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gkv-eB-Q56">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,6 +192,7 @@
                             <constraint firstItem="ZTm-GO-ewT" firstAttribute="trailing" secondItem="b5t-Ni-z11" secondAttribute="trailing" constant="95" id="tKj-oj-Dg0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xAO-sK-31b"/>
                     <connections>
                         <outlet property="end_point" destination="ds0-WN-izl" id="SN8-Eu-2dA"/>
                         <outlet property="fisrt_point" destination="ZfO-ce-ngv" id="3Xi-PM-jsl"/>
@@ -200,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pa7-NQ-Wep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-729" y="5"/>
+            <point key="canvasLocation" x="197.70992366412213" y="4.9295774647887329"/>
         </scene>
         <!--Second Splash Screen-->
         <scene sceneID="wRd-hV-Rtj">
@@ -303,7 +304,7 @@ nearby devices</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJy-9O-y6H" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707.44186046511629" y="12.231759656652361"/>
+            <point key="canvasLocation" x="1632.824427480916" y="11.971830985915494"/>
         </scene>
         <!--Third Splash Screen-->
         <scene sceneID="h44-wv-4r8">
@@ -405,7 +406,7 @@ more convenient for you to use</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EbD-Hj-35T" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348.854961832061" y="11.971830985915494"/>
+            <point key="canvasLocation" x="2275.5725190839694" y="11.971830985915494"/>
         </scene>
         <!--Forty Splash Screen-->
         <scene sceneID="naI-f7-1i9">
@@ -508,13 +509,13 @@ easy search</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFc-bd-8Lt" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2009.9236641221373" y="17.605633802816904"/>
+            <point key="canvasLocation" x="2936.6412213740455" y="17.605633802816904"/>
         </scene>
         <!--Free Trial View Conroller-->
         <scene sceneID="sDi-lX-iLj">
             <objects>
                 <viewController storyboardIdentifier="FreeTrialViewConroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eTc-I6-EMS" customClass="FreeTrialViewConroller" customModule="Find_lost_pods" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="z1H-fp-fBc">
+                    <view key="view" contentMode="scaleToFill" id="z1H-fp-fBc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -568,20 +569,20 @@ easy search</string>
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms and Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z25-tV-EqJ">
-                                        <rect key="frame" x="129.33333333333334" y="230" width="104.66666666666666" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Terms and Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z25-tV-EqJ">
+                                        <rect key="frame" x="149.66666666666666" y="230" width="105" height="12"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="82" translatesAutoresizingMaskIntoConstraints="NO" id="Wd8-2U-vWT">
-                                        <rect key="frame" x="253.99999999999997" y="230" width="66.666666666666657" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="82" translatesAutoresizingMaskIntoConstraints="NO" id="Wd8-2U-vWT">
+                                        <rect key="frame" x="274.66666666666669" y="230" width="67" height="12"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Restore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L9-hb-Tg2">
-                                        <rect key="frame" x="72" y="230" width="37.333333333333343" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="Restore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L9-hb-Tg2">
+                                        <rect key="frame" x="72" y="230" width="57.666666666666657" height="12"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -642,7 +643,7 @@ easy search</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Shv-hh-qst" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2693.8931297709923" y="17.605633802816904"/>
+            <point key="canvasLocation" x="3620.6106870229005" y="17.605633802816904"/>
         </scene>
         <!--Pay Wall View Controller-->
         <scene sceneID="ofV-u4-Wde">
@@ -672,7 +673,7 @@ easy search</string>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Terms and Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM9-Ez-3st">
-                                <rect key="frame" x="130" y="799.66666666666663" width="94.333333333333314" height="12.333333333333371"/>
+                                <rect key="frame" x="130" y="799.66666666666663" width="94.666666666666686" height="12.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12.33" id="lmr-9y-kAp"/>
                                 </constraints>
@@ -681,7 +682,7 @@ easy search</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="82" translatesAutoresizingMaskIntoConstraints="NO" id="sxT-Rn-bFZ">
-                                <rect key="frame" x="244.33333333333334" y="799.66666666666663" width="76.666666666666657" height="12.333333333333371"/>
+                                <rect key="frame" x="244.66666666666666" y="799.66666666666663" width="76.333333333333343" height="12.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12.33" id="LJD-aw-Gnk"/>
                                 </constraints>
@@ -830,7 +831,7 @@ Trial, then for 7.99$/week</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fr-93-nbw">
-                                <rect key="frame" x="207.33333333333331" y="573.66666666666663" width="148.33333333333331" height="29.333333333333371"/>
+                                <rect key="frame" x="207.33333333333326" y="573.66666666666663" width="148.33333333333337" height="29.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="148.33000000000001" id="5k5-Vb-wCZ"/>
                                     <constraint firstAttribute="height" constant="29.333333333333371" id="jOL-Oh-64W"/>
@@ -905,6 +906,7 @@ Trial, then for 39.99$/year</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cross" destination="tQ2-p8-yja" id="GXa-tL-p4H"/>
                         <outlet property="labelWeekAbout" destination="pl2-lp-Klt" id="tGH-UL-wbE"/>
                         <outlet property="labelYearAbout" destination="2Fr-93-nbw" id="1X6-So-M2a"/>
                         <outlet property="switchButton" destination="e33-e9-cOK" id="Og2-En-gAC"/>
@@ -918,7 +920,7 @@ Trial, then for 39.99$/year</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXt-Fq-tT0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3388.5496183206105" y="16.197183098591552"/>
+            <point key="canvasLocation" x="4315.2671755725187" y="16.197183098591552"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="nnU-Ex-cFB">
@@ -930,6 +932,9 @@ Trial, then for 39.99$/year</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="77g-86-3J7">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="UNe-J2-JRr">
+                                <rect key="frame" x="0.0" y="196" width="393" height="490"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKe-3A-rVu">
                                 <rect key="frame" x="166.33333333333334" y="71" width="60.333333333333343" height="24"/>
@@ -943,9 +948,6 @@ Trial, then for 39.99$/year</string>
                                 <color key="textColor" red="0.090196078430000007" green="0.1333333333" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="UNe-J2-JRr">
-                                <rect key="frame" x="0.0" y="196" width="393" height="490"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob4-iW-qRa">
                                 <rect key="frame" x="89.000000000000014" y="207.33333333333334" width="215.33333333333337" height="45"/>
                                 <string key="text">Find devices by monitoring
@@ -970,7 +972,7 @@ signal strength</string>
                                     <action selector="searchButton:" destination="nwq-uA-6cF" eventType="touchUpInside" id="H4j-Sc-HtN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hepl Center" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tg-Pz-ENi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help Center" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tg-Pz-ENi">
                                 <rect key="frame" x="142.66666666666666" y="698.66666666666663" width="108" height="25.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1031,6 +1033,7 @@ signal strength</string>
                             <constraint firstItem="UNe-J2-JRr" firstAttribute="leading" secondItem="3ep-HR-qCb" secondAttribute="leading" id="xQA-Xt-8SN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iwz-3X-cEW"/>
                     <connections>
                         <outlet property="controlPanelView" destination="Vdq-NU-N9i" id="cYO-Dv-zVW"/>
                         <outlet property="favorites" destination="usS-Yy-acl" id="Ube-L1-WiN"/>
@@ -1040,7 +1043,7 @@ signal strength</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSm-Wt-2Np" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-692.36641221374043" y="781.69014084507046"/>
+            <point key="canvasLocation" x="234.35114503816794" y="781.69014084507046"/>
         </scene>
         <!--Search Devices View Controller-->
         <scene sceneID="RGb-hD-S4I">
@@ -1064,7 +1067,7 @@ signal strength</string>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-Rq-9am">
-                                <rect key="frame" x="148" y="621.66666666666663" width="103.66666666666669" height="21.333333333333371"/>
+                                <rect key="frame" x="148.33333333333334" y="621.66666666666663" width="103.33333333333334" height="21.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21.329999999999998" id="LZi-3v-2MY"/>
                                 </constraints>
@@ -1094,7 +1097,7 @@ signal strength</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cu-kI-kfi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.610687022900763" y="781.69014084507046"/>
+            <point key="canvasLocation" x="947.32824427480909" y="781.69014084507046"/>
         </scene>
         <!--Search Result View Controller-->
         <scene sceneID="gct-hp-WM5">
@@ -1279,13 +1282,14 @@ signal strength</string>
                         <outlet property="countOfDevices" destination="JGI-wJ-FLs" id="3f5-rD-T7L"/>
                         <outlet property="favorites" destination="dlh-tS-1qi" id="m5g-zl-4T2"/>
                         <outlet property="helpCenterLabel" destination="Y1d-Lk-3PA" id="L7i-m4-1nI"/>
+                        <outlet property="history" destination="e2u-lT-8b2" id="GlY-Hl-WF9"/>
                         <outlet property="settings" destination="EOD-gN-R7a" id="E6Y-3v-tnB"/>
                         <outlet property="tableView" destination="u6n-up-4cc" id="W7e-0M-chU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzh-qj-zFO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771.75572519083971" y="781.69014084507046"/>
+            <point key="canvasLocation" x="1698.4732824427481" y="781.69014084507046"/>
         </scene>
         <!--About Bluetooth Device View Controller-->
         <scene sceneID="1nV-wC-0e9">
@@ -1490,6 +1494,7 @@ signal strength</string>
                         <constraints>
                             <constraint firstItem="azh-su-obd" firstAttribute="centerX" secondItem="Lg9-wE-a92" secondAttribute="centerX" id="0dL-RX-DWQ"/>
                             <constraint firstAttribute="trailing" secondItem="Yrl-ro-nFc" secondAttribute="trailing" constant="24" id="2Km-T3-XdD"/>
+                            <constraint firstItem="kL9-hs-TJF" firstAttribute="centerX" secondItem="Lg9-wE-a92" secondAttribute="centerX" id="2MU-yz-4dT"/>
                             <constraint firstItem="Lg9-wE-a92" firstAttribute="trailing" secondItem="gKD-s5-RE3" secondAttribute="trailing" constant="168" id="2jU-PF-rB9"/>
                             <constraint firstAttribute="bottom" secondItem="ix5-TG-HK2" secondAttribute="bottom" id="B9v-MX-Hie"/>
                             <constraint firstItem="gKD-s5-RE3" firstAttribute="top" secondItem="azh-su-obd" secondAttribute="bottom" constant="60" id="Baf-tI-0dx"/>
@@ -1508,9 +1513,7 @@ signal strength</string>
                             <constraint firstItem="ij8-3f-5em" firstAttribute="top" secondItem="Lg9-wE-a92" secondAttribute="top" constant="8" id="b3M-pl-Hsw"/>
                             <constraint firstAttribute="trailing" secondItem="gV0-ZK-vRY" secondAttribute="trailing" constant="24" id="c0W-fd-QgN"/>
                             <constraint firstItem="4dp-l8-ZEM" firstAttribute="leading" secondItem="Lg9-wE-a92" secondAttribute="leading" constant="128" id="chh-v2-Eux"/>
-                            <constraint firstItem="kL9-hs-TJF" firstAttribute="leading" secondItem="Lg9-wE-a92" secondAttribute="leading" constant="147" id="flD-cJ-C7f"/>
                             <constraint firstItem="dnq-xK-sK3" firstAttribute="leading" secondItem="Lg9-wE-a92" secondAttribute="leading" constant="24" id="fmC-D1-M5U"/>
-                            <constraint firstItem="Lg9-wE-a92" firstAttribute="trailing" secondItem="kL9-hs-TJF" secondAttribute="trailing" constant="147" id="h63-uP-5HE"/>
                             <constraint firstItem="P9c-Gt-ZvF" firstAttribute="centerX" secondItem="Lg9-wE-a92" secondAttribute="centerX" id="hpm-sM-Zjb"/>
                             <constraint firstItem="aGc-Z1-eKL" firstAttribute="centerX" secondItem="Lg9-wE-a92" secondAttribute="centerX" id="ipk-zd-b7b"/>
                             <constraint firstItem="aGc-Z1-eKL" firstAttribute="top" secondItem="Lg9-wE-a92" secondAttribute="top" constant="8" id="k1k-Ag-JRl"/>
@@ -1541,7 +1544,7 @@ signal strength</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTi-cA-Lfs" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="780.98591549295782"/>
+            <point key="canvasLocation" x="2426.7175572519081" y="780.98591549295782"/>
         </scene>
         <!--Favorite Devices View Conroller-->
         <scene sceneID="iJ7-r2-rOU">
@@ -1740,7 +1743,7 @@ found devices</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJz-g4-azC" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="780.98591549295782"/>
+            <point key="canvasLocation" x="3226.7175572519081" y="780.98591549295782"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="ccD-wt-5vm">
@@ -1910,7 +1913,7 @@ found devices</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOD-6Q-n9p" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3142.7480916030531" y="780.98591549295782"/>
+            <point key="canvasLocation" x="4069.4656488549617" y="780.98591549295782"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="qtn-mv-qEc">
@@ -1963,7 +1966,24 @@ found devices</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTl-Ig-pMj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3911" y="781"/>
+            <point key="canvasLocation" x="4837.4045801526718" y="780.98591549295782"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xQQ-7j-0cS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="xPD-R5-9ub" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="akz-5P-JJ7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RKe-cO-ClX" kind="relationship" relationship="rootViewController" id="sTp-Xa-Udp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1e-Uc-XZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729.00763358778624" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>

@@ -65,25 +65,22 @@ class FavoriteDevicesViewConroller: UIViewController {
     @objc private func historyTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let favoritesViewController = storyboard.instantiateViewController(withIdentifier: "FavoriteDevicesViewConroller") as? FavoriteDevicesViewConroller {
-            favoritesViewController.modalPresentationStyle = .fullScreen
             favoritesViewController.fromHistory = true
-            present(favoritesViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(favoritesViewController, animated: true)
         }
     }
     
     @objc private func homeTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
-            homeViewController.modalPresentationStyle = .fullScreen
-            present(homeViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(homeViewController, animated: true)
         }
     }
     
     @objc private func settingsTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let settingsViewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController {
-            settingsViewController.modalPresentationStyle = .fullScreen
-            present(settingsViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(settingsViewController, animated: true)
         }
     }
     
@@ -142,9 +139,8 @@ extension FavoriteDevicesViewConroller: UITableViewDelegate{
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let aboutViewController = storyboard.instantiateViewController(withIdentifier: "AboutBluetoothDeviceViewController") as? AboutBluetoothDeviceViewController {
-            aboutViewController.modalPresentationStyle = .fullScreen
             aboutViewController.device = device
-            present(aboutViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(aboutViewController, animated: true)
         } else {
             print("AboutBluetoothDeviceViewController not found")
         }

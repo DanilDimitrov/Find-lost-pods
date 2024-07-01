@@ -25,7 +25,7 @@ class AboutBluetoothDeviceViewController: UIViewController {
     @IBOutlet weak var pin: UIImageView!
     
     @IBAction func foundButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBOutlet weak var mapViewHeightConstraint: NSLayoutConstraint!
@@ -75,7 +75,7 @@ class AboutBluetoothDeviceViewController: UIViewController {
     }
     
     @objc private func backTapped() {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @objc private func pinTapped() {

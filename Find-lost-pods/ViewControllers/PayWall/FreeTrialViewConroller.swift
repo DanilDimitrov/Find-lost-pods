@@ -42,7 +42,8 @@ class FreeTrialViewConroller: UIViewController{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let payWallViewController = storyboard.instantiateViewController(withIdentifier: "PayWallViewController") as? PayWallViewController {
             payWallViewController.modalPresentationStyle = .fullScreen
-            present(payWallViewController, animated: true, completion: nil)
+            payWallViewController.fromInterface = false
+            self.navigationController?.pushViewController(payWallViewController, animated: true)
         }
     }
 }

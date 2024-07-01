@@ -59,9 +59,8 @@ class SearchDevicesViewController: UIViewController {
     private func go_to_device_list() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let searchResultViewController = storyboard.instantiateViewController(withIdentifier: "SearchResultViewController") as? SearchResultViewController {
-            searchResultViewController.modalPresentationStyle = .fullScreen
             searchResultViewController.devices = bluetoothViewModel.foundDevices()
-            present(searchResultViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(searchResultViewController, animated: true)
         }
     }
 }
