@@ -81,9 +81,8 @@ class SettingsViewController: UIViewController{
     
     @objc private func historyTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let favoritesViewController = storyboard.instantiateViewController(withIdentifier: "FavoriteDevicesViewConroller") as? FavoriteDevicesViewConroller {
-            favoritesViewController.fromHistory = true
-            self.navigationController?.pushViewController(favoritesViewController, animated: true)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as? HistoryViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

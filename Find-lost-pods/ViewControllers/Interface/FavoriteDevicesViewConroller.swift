@@ -19,7 +19,6 @@ class FavoriteDevicesViewConroller: UIViewController {
     @IBOutlet weak var favoritesLabel: UILabel!
     
     var savedArray: [BluetoothDevice] = []
-    var fromHistory: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +29,8 @@ class FavoriteDevicesViewConroller: UIViewController {
         
         let defaults = UserDefaults.standard
         
-        if !fromHistory{
-            loadDevicesFromDefaults(key: "favoriteDevices")
-        }else{
-            loadDevicesFromDefaults(key: "historyDevices")
-            favoritesLabel.text = "History"
-        }
+        loadDevicesFromDefaults(key: "favoriteDevices")
+
         
         if savedArray.isEmpty {
             imageNoDevicesImageView.isHidden = false
@@ -64,9 +59,8 @@ class FavoriteDevicesViewConroller: UIViewController {
     
     @objc private func historyTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let favoritesViewController = storyboard.instantiateViewController(withIdentifier: "FavoriteDevicesViewConroller") as? FavoriteDevicesViewConroller {
-            favoritesViewController.fromHistory = true
-            self.navigationController?.pushViewController(favoritesViewController, animated: true)
+        if let historyViewController = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as? HistoryViewController {
+            self.navigationController?.pushViewController(historyViewController, animated: true)
         }
     }
     

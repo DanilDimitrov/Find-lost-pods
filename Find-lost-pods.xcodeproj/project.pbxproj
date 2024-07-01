@@ -44,6 +44,7 @@
 		8BF129B82C305F23005ED853 /* termsofuse.html in Resources */ = {isa = PBXBuildFile; fileRef = 8BF129B72C305F23005ED853 /* termsofuse.html */; };
 		8BF129B92C305F23005ED853 /* privacypolicy.html in Resources */ = {isa = PBXBuildFile; fileRef = 8BF129B62C305F23005ED853 /* privacypolicy.html */; };
 		8BF129BB2C306223005ED853 /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = 8BF129BA2C306223005ED853 /* faq.html */; };
+		8BF129C22C32F16D005ED853 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF129C12C32F16D005ED853 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		8BF129B62C305F23005ED853 /* privacypolicy.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = privacypolicy.html; sourceTree = "<group>"; };
 		8BF129B72C305F23005ED853 /* termsofuse.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = termsofuse.html; sourceTree = "<group>"; };
 		8BF129BA2C306223005ED853 /* faq.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
+		8BF129C12C32F16D005ED853 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				8B128DD42C2FE05C0063F7A6 /* SettingsViewController.swift */,
 				8BF129AC2C2FFB59005ED853 /* SearchDevicesViewController.swift */,
 				8BF129AE2C2FFE57005ED853 /* SearchResultViewController.swift */,
+				8BF129C12C32F16D005ED853 /* HistoryViewController.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				8B128DD52C2FE05C0063F7A6 /* SettingsViewController.swift in Sources */,
 				8B128DD12C2F35C40063F7A6 /* FoundBluetoothDeviceTableViewCell.swift in Sources */,
 				8B859E0F2C2D41D500D61B3F /* GradientView.swift in Sources */,
+				8BF129C22C32F16D005ED853 /* HistoryViewController.swift in Sources */,
 				8BF129AB2C2FF504005ED853 /* BluetoothDevice.swift in Sources */,
 				8BF129AD2C2FFB59005ED853 /* SearchDevicesViewController.swift in Sources */,
 				8B859E1F2C2DC3AC00D61B3F /* FreeTrialViewConroller.swift in Sources */,
